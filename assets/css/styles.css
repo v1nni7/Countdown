@@ -1,0 +1,269 @@
+:root {
+    --black: #4D4C59;
+    --purple: #6C63FF;
+    --light-grey: #C8C8C8;
+    --text-color: #9C9AB6;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+h1,
+h2,
+h6 {
+    margin: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+.container {    
+    padding: 0 12px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.section-countdown {
+    display: flex;
+}
+
+.side-countdown,
+.side-rocket {
+    width: 50%;
+    padding: 0 24px;
+}
+
+.side-countdown h1 {
+    font-size: 2.9rem;
+    text-align: center;
+    color: var(--purple);
+    text-transform: uppercase;
+}
+
+.countdown ul {
+    margin: 0 8px;
+    padding: 0;
+    display: flex;
+    align-items: flex-end;
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+.countdown li {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.countdown p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: var(--light-grey);
+}
+
+.countdown h2 {
+    font-size: 6rem;
+    font-weight: 400;
+    color: var(--black);
+}
+
+.wrap-subscribe-button {
+    padding: 12px;
+    text-align: center;
+}
+
+.wrap-subscribe-button h2 {
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.wrap-subscribe-button button {
+    border: none;
+    color: #fff;
+    margin: 12px;
+    font-weight: 300;
+    font-size: 1.2rem;
+    padding: 12px 52px;
+    border-radius: 12px;
+    background-color: var(--purple);
+}
+
+.wrap-subscribe-button button:hover {
+    cursor: pointer;
+    background-color: #5a52f0;
+}
+
+.modal {
+    left: 0;
+    top: 0px;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: none;
+    overflow: auto;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    padding: 0;
+    margin: auto;
+    color: #000;
+    position: relative;
+    border-radius: 12px;
+    border: 1px solid #888;
+    animation-duration: 0.4s;
+    animation-name: animatetop;
+    background-color: #fefefe;
+    -webkit-animation-duration: 0.4s;
+    -webkit-animation-name: animatetop;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px; 
+        opacity: 0;
+    } 
+
+    to {
+        top: 0; 
+        opacity: 1;
+    }
+}
+
+@keyframes animatetop {
+    from {
+        opacity: 0;
+        top: -300px; 
+    }
+
+    to {
+        top: 0; 
+        opacity: 1;
+    }
+}
+  
+.close {
+    color: #fff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 12px;
+    display: flex;
+    border-bottom: 1px #ccc solid;
+    justify-content: space-between;
+}
+
+.modal-header h2 {
+    margin: 8px;
+    font-weight: 400;
+}
+
+.modal-header a {
+    margin: 8px;
+    display: flex;
+    color: #7a7a7a;
+    transition: 0.2s;
+    align-items: center;
+}
+
+.modal-header a:hover {
+    color: #000;
+}
+
+.modal-header svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.modal-body {
+    padding: 12px;
+    border-bottom: 1px #ccc solid;
+}
+
+.form-group {
+    padding: 8px 0;
+}
+
+.form-control {
+    width: 100%;
+    border: none;
+    height: 50px;
+    padding: 12px;
+    border-radius: 4px;
+    background-color: var(--light-grey);
+}
+
+.form-control:focus {
+    outline: #6C63FF;
+}
+
+.modal-footer {
+    display: flex;
+    padding: 12px;
+    justify-content: space-between;
+}
+
+.modal-footer .btn-close-modal {
+    border: none;
+    transition: 0.2s;
+    border-radius: 4px;
+    padding: 12px 24px;
+    background-color: #ccc;
+}
+
+.modal-footer .btn-close-modal:hover {
+    cursor: pointer;
+    background-color: #aaaaaa;
+}
+
+.modal-footer .btn-submit-form {
+    border: none;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: 0.2s;
+    border-radius: 4px;
+    padding: 12px 32px;
+    background-color: var(--purple);
+}
+
+.modal-footer .btn-submit-form:hover {
+    cursor: pointer;
+    background-color: #5a52f0;
+}
+
+@media screen and (min-width: 992px) {
+    .container {
+        padding: 0;
+        width: 90%;
+        margin: 0 auto;
+    }
+}
